@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.advantages {
+    background: #FFFFFF;
+    height: 569px;
+    padding: 120px 100px;
+}
+
+.advantages-title{
+    text-align: center;
+    font-size: 40px;
+}
+
+.highlight {
+    width: 100px;
+    height: 4px;
+    background: #F5BD41;
+    margin: 20px auto 80px;
+    border: 0;
+}
+
+.advantages div {
+    display: inline-block;
+    float: left;
+    width: 25%;
+    height: 180px;
+}
+
+.advantages img {
+    display: block;
+    margin-bottom: 55px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.advantages-text {
+    font-size: 24px;
+    text-align: center;
+}
