@@ -12,10 +12,13 @@
   <body>
   <div class="top-section">
     <div class="header">
-      <img src="./images/header-images/logo_vector.png" alt="logo">
+      <img class="header-logo" src="./images/header-images/logo_vector.png" alt="logo">
       <div class="header-menu">
         <div class="header-links">
-          <a href="#">Stays</a>
+          <div class="header-highlight">
+            <a href="#">Stays</a>
+            <hr class="text-highlight">
+          </div>
           <a href="#">Attractions</a>
         </div>
         <div class="header-icons">
@@ -32,16 +35,15 @@
         to live, work or just relax</p>
     <div class="top-forms">
       <div class="destination-form">
-        <label for="destination">Your destination or hotel name</label><br />
+        <label for="destination">Your destination or hotel name</label>
         <input id="destination" type="text" name="destination" value="New York" />
       </div>
       <div class="check-form">
-        <label for="check">Check-in — Check-out</label><br />
+        <label for="check">Check-in — Check-out</label>
         <input id="check" type="text" name="check" value="Tue 15 Sept — Sat 19 Sept" />
       </div>
       <div class="info-form">
-        <label for="info"></label><br />
-        <input id="info" type="text" name="info" value="2 Adults — 0 Children — 1 Room" />
+        <input type="text" value="2 Adults — 0 Children — 1 Room" />
       </div>
         <button class="top-search">Search</button>
     </div>

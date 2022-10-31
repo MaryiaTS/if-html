@@ -28,6 +28,11 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  height: 46px;
+}
+
+.header-logo {
+  height: 40px;
 }
 
 .header-menu {
@@ -46,7 +51,15 @@ a {
   display: flex;
   width: 201px;
   justify-content: space-between;
-  align-items: center;
+  padding-top: 6px;
+}
+
+.text-highlight {
+  display: block;
+  width: 50px;
+  background: #f5bd41;
+  border: 2px solid #f5bd41;
+  margin: 8px auto 0;
 }
 
 .header-icons {
@@ -81,10 +94,11 @@ a {
 
 .top-forms label {
   padding-left: 24px;
+  display: block;
 }
 
 .destination-form {
-  width: 41%;
+  width: 38%;
 }
 
 .destination-form input {
@@ -103,7 +117,11 @@ a {
 }
 
 .info-form {
-  width: 22%;
+  width: 25%;
+}
+
+.info-form input {
+  margin-top: 45px;
 }
 
 .top-search {
