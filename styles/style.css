@@ -7,8 +7,145 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  max-width: 1440px;
   font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+.top-section {
+  width: 100%;
+  min-height: 100vh;
+  padding: 51px 104px 120px;
+  background-image: url("./../images/header-images/background-castelmezzano.png");
+  background-position: center 0;
+  background-size: cover;
+  color: #FFFFFF;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 46px;
+}
+
+.header-logo {
+  height: 40px;
+}
+
+.header-menu {
+  display: flex;
+  flex-direction: row;
+  width: 343px;
+  justify-content: space-between;
+}
+
+.header-links a {
+  font-size: 24px;
+  color: #FFFFFF;
+}
+
+.header-links {
+  display: flex;
+  width: 201px;
+  justify-content: space-between;
+  padding-top: 6px;
+}
+
+.text-highlight {
+  display: block;
+  width: 50px;
+  background: #f5bd41;
+  border: 2px solid #f5bd41;
+  margin: 8px auto 0;
+}
+
+.header-icons {
+  display: flex;
+  width: 94px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-text {
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 59px;
+  padding-top: 202px;
+}
+
+.top-forms {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  font-size: 18px;
+  /*align-content: space-around;*/
+}
+
+.top-forms input {
+  width: 100%;
+  height: 64px;
+  padding: 22px 24px;
+  margin-top: 24px;
+  border: 3px solid #F3F3F4;
+}
+
+.top-forms label {
+  padding-left: 24px;
+  display: block;
+}
+
+.destination-form {
+  width: 38%;
+}
+
+.destination-form input {
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+  padding-left: 24px;
+}
+
+.check-form {
+  width: 21%;
+}
+
+.check-form input {
+  border: 3px solid #F5BD41;
+  border-radius: 8px;
+}
+
+.info-form {
+  width: 25%;
+}
+
+.info-form input {
+  margin-top: 45px;
+}
+
+.top-search {
+  height: 64px;
+  margin-top: 47px;
+  border-radius: 8px;
+  width: 16%;
+  background: #3077C6;
+  font-weight: 500;
+  font-size: 24px;
+  color: white;
+  border: none;
+}
+
+.top-apps {
+  margin-top: 120px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.top-badge {
+  width: 270px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .advantages {
