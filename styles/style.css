@@ -320,6 +320,8 @@ a {
     --col-width: calc(100% / 12);
     --container-width: 768px;
     --form-mob-unit: 8px;
+    --mob-row-height: 48px;
+    --mob-row-2-width: calc(var(--container-width) / 2 - var(--form-mob-unit) * 2.5 );
   }
 
   .col-md-1 {
@@ -447,7 +449,7 @@ a {
 
   .header__forms-row-2 {
     display: grid;
-    grid-template-columns: 49% var(--form-mob-unit) 49%;
+    grid-template-columns: var(--mob-row-2-width) var(--form-mob-unit) var(--mob-row-2-width);
     grid-auto-rows: calc(var(--mob-row-height) / 2);
     grid-template-areas:
     "check-in-title . check-out-title"
@@ -624,7 +626,7 @@ a {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   /* For mobile phones: */
 
   :root {
@@ -632,6 +634,7 @@ a {
     --container-width: 328px;
     --form-mob-unit: 8px;
     --mob-row-height: 48px;
+    --mob-row-2-width: calc(var(--container-width) / 2 - var(--form-mob-unit) * 1.5 );
   }
 
   .col-sm-1 {
@@ -762,7 +765,7 @@ a {
 
   .header__forms-row-2 {
     display: grid;
-    grid-template-columns: 49% var(--form-mob-unit) 49%;
+    grid-template-columns: var(--mob-row-2-width) var(--form-mob-unit) var(--mob-row-2-width);
     grid-auto-rows: calc(var(--mob-row-height) / 2);
     grid-template-areas:
     "check-in-title . check-out-title"
@@ -887,6 +890,9 @@ a {
     font-size: 15px;
   }
 
+  .footer {
+    padding: 0;
+  }
 
   .footer__logo--hidden {
     display: block;
