@@ -6,7 +6,7 @@
     <meta name="author" content="Mariya Tsimashkova" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
-    <title>lesson-8</title>
+    <title>lesson-10</title>
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
@@ -193,20 +193,21 @@
           <svg class="header__logo">
             <use href="#header-logo" />
           </svg>
-            <a class="header__links--text text-1" href="#">Stays</a>
-            <a class="header__links--text text-2" href="#">Attractions</a>
+            <a class="header__menu-item header__links--text text-1 " href="#">Stays</a>
+            <a class="header__menu-item header__links--text text-2" href="#">Attractions</a>
+          <a class="header__menu-item icon-1">
             <svg class="header__icon-night">
               <use href="#icon-night" />
             </svg>
+          </a>
+          <a class="header__menu-item icon-2">
             <svg class="header__icon-account">
               <use href="#icon-account" />
             </svg>
+          </a>
           <svg class="header__menu--hidden">
               <use href="#header-menu-hidden" />
             </svg>
-        </div>
-        <div class="header__highlight">
-          <hr class="header__links--text-highlight text-1" />
         </div>
         <p class="header__text">
           Discover stays <br />
@@ -304,9 +305,9 @@
         </div>
       </div>
     </section>
-    <div class="advantages">
+    <section class="section-2">
+    <div class="advantages container">
       <h2 class="advantages__title">What do we offer</h2>
-      <hr class="advantages__highlight" />
       <div class="advantages__row">
         <div class="col-lg-3 col-md-6 col-sm-6 advantages__row-elem">
           <svg class="advantages__row-icon">
@@ -334,6 +335,35 @@
         </div>
       </div>
     </div>
+    </section>
+    <section class="section-3">
+    <div class="homes container">
+      <h2 class="homes__title">Homes guests loves</h2>
+      <div class="homes__row">
+        <div class="col-lg-3 col-md-4 col-sm-3 homes__row-elem">
+          <img class="homes__image" src="./images/homes-images/hotel.png" alt="hotel">
+          <a class="homes__types-title" href="#">Hotel Leopold</a>
+          <p class="homes__row-text">Saint Petersburg, Russia</p>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-3 homes__row-elem">
+          <img class="homes__image" src="images/homes-images/apartment.png" alt="apartment">
+          <a class="homes__types-title" href="#">Apartment Sunshine</a>
+          <p class="homes__row-text">Santa  Cruz de Tenerife, Spain</p>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-3 homes__row-elem">
+          <img class="homes__image" src="images/homes-images/villa.png" alt="villa">
+          <a class="homes__types-title" href="#">Villa Kunerad</a>
+          <p class="homes__row-text">Vysokie Tatry, Slowakia</p>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-3 homes__row-elem">
+          <img class="homes__image" src="images/homes-images/hostel.png" alt="hostel">
+          <a class="homes__types-title" href="#">Hostel Friendship</a>
+          <p class="homes__row-text">Berlin, Germany</p>
+        </div>
+        <img class="homes__row-arrow" src="./images/homes-images/arrow.png" alt="arrow">
+      </div>
+    </div>
+    </section>
     <section class="footer-con">
       <div class="container footer">
         <div class="footer__logo--hidden">
