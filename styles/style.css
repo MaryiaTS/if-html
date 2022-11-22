@@ -290,8 +290,6 @@ a {
   text-align: center;
 }
 
-
-
 .section-3 {
   background-color: #EAF0F9;
 }
@@ -319,11 +317,10 @@ a {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  position: relative;
 }
 
 .homes__image {
-  max-width: var(--homes-image-width);
+  max-width: 100%;
   aspect-ratio: 1/1;
 }
 
@@ -343,7 +340,7 @@ a {
   aspect-ratio: 1/1;
   position: absolute;
   right: calc( var(--width-arrow) / 2 - var(--width-arrow));
-  top: calc((var(--homes-image-width) / 2) - var(--width-arrow) / 2);
+  top: calc((var(--col-width) * 8.5 / 2) - var(--width-arrow) / 2);
 }
 
 .footer-con {
