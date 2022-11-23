@@ -4,6 +4,8 @@
   --col-width: calc(100% / 12);
   --unit: 16px;
   --container-width: 1232px;
+  --header-top-height: 40px;
+  --homes-image-width: 296px;
 }
 
 * {
@@ -101,6 +103,38 @@ a {
   max-width: 205px;
 }
 
+.header__top-section {
+  display: grid;
+  grid-template-columns: 17% auto 5% 2% 9.5% 4% 2.5% 2% 3% 0;
+  grid-template-rows: var(--header-top-height);
+  grid-template-areas:
+  "logo . stays . attractions . night . account menu";
+  align-items: center;
+}
+
+.header__menu-item {
+  display: grid;
+  position: relative;
+}
+
+.header__menu-item:hover:after {
+  display: block;
+  content: ' ';
+  width: 46px;
+  background: #f5bd41;
+  border: 2px solid #f5bd41;
+  position: absolute;
+  bottom: calc(-4px - ((var(--header-top-height) - 100%) / 2) - 2px) ;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header__links--text {
+  font-size: 24px;
+  color: #FFFFFF;
+  height: 28px;
+}
+
 .text-1 {
   grid-area: stays;
 }
@@ -109,45 +143,20 @@ a {
   grid-area: attractions;
 }
 
-.header__top-section {
-  display: grid;
-  grid-template-columns: 17% auto 7% 13.5% 4.5% 3% 0;
-  grid-template-rows: auto;
-  grid-template-areas:
-  "logo . stays attractions night account menu";
-  align-items: center;
+.icon-1 {
+  grid-area: night;
 }
 
-.header__links--text {
-  font-size: 24px;
-  color: #FFFFFF;
-}
-
-.header__links--text-highlight {
-  width: 50px;
-  background: #f5bd41;
-  border: 2px solid #f5bd41;
-  margin: 8px auto 0;
-  grid-area: highlight;
-}
-
-.header__highlight {
-  display: grid;
-  grid-template-columns: 72.5% 4% ;
-  grid-template-rows: auto;
-  grid-template-areas:
-  ". highlight";
-  height: 0;
+.icon-2 {
+  grid-area: account;
 }
 
 .header__icon-night {
-  grid-area: night;
   width: 30px;
   aspect-ratio: 1/1;
 }
 
 .header__icon-account {
-  grid-area: account;
   width: 40px;
   aspect-ratio: 1/1;
 }
@@ -247,14 +256,19 @@ a {
   text-align: center;
   font-weight: 500;
   font-size: 40px;
+  position: relative;
+  margin-bottom: 104px;
 }
 
-.advantages__highlight {
+.advantages__title:after {
+  display: block;
+  content: ' ';
   width: 100px;
   height: 4px;
   background: #f5bd41;
-  margin: 20px auto 80px;
-  border: 0;
+  position: absolute;
+  bottom: -20px ;
+  left: calc((100% - 100px) / 2);
 }
 
 .advantages__row {
@@ -274,6 +288,59 @@ a {
 .advantages__row-text {
   font-size: 24px;
   text-align: center;
+}
+
+.section-3 {
+  background-color: #EAF0F9;
+}
+
+.homes {
+  color: #383838;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.homes__title {
+  text-align: center;
+  font-weight: 500;
+  font-size: 40px;
+  margin-bottom: 104px;
+}
+
+.homes__row {
+  display: flex;
+  gap: 16px;
+  position: relative;
+}
+
+.homes__row-elem {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.homes__image {
+  max-width: 100%;
+  aspect-ratio: 1/1;
+}
+
+.homes__types-title {
+  font-size: 24px;
+  color: #3077C6;
+}
+
+.homes__row-text {
+  font-size: 24px;
+  color: #BFBFBF;
+}
+
+.homes__row-arrow {
+  --width-arrow: 40px;
+  width: var(--width-arrow);
+  aspect-ratio: 1/1;
+  position: absolute;
+  right: calc( var(--width-arrow) / 2 - var(--width-arrow));
+  top: calc((var(--col-width) * 8.5 / 2) - var(--width-arrow) / 2);
 }
 
 .footer-con {
@@ -322,6 +389,7 @@ a {
     --form-mob-unit: 8px;
     --mob-row-height: 48px;
     --mob-row-2-width: calc(var(--container-width) / 2 - var(--form-mob-unit) * 2.5 );
+    --homes-image-width: 240px;
   }
 
   .col-md-1 {
@@ -595,6 +663,44 @@ a {
     font-size: 16px;
   }
 
+  .homes {
+    color: #383838;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .homes__title {
+    text-align: center;
+    font-weight: 500;
+    font-size: 36px;
+    margin-bottom: 60px;
+  }
+
+  .homes__row-elem {
+    gap: 16px;
+  }
+
+  .homes__row-elem:nth-child(4) {
+    display: none;
+  }
+
+  .homes__types-title {
+    font-size: 18px;
+  }
+
+  .homes__row-text {
+    font-size: 18px;
+  }
+
+  .homes__row-arrow {
+    --width-arrow: 34px;
+    width: var(--width-arrow);
+    aspect-ratio: 1/1;
+    position: absolute;
+    right: calc( var(--width-arrow) / 2 - var(--width-arrow));
+    top: calc((var(--homes-image-width) / 2) - var(--width-arrow) / 2);
+  }
+
   .footer__logo--hidden {
     display: block;
     margin: 40px auto;
@@ -635,6 +741,7 @@ a {
     --form-mob-unit: 8px;
     --mob-row-height: 48px;
     --mob-row-2-width: calc(var(--container-width) / 2 - var(--form-mob-unit) * 1.5 );
+    --homes-image-width: 156px;
   }
 
   .col-sm-1 {
@@ -888,6 +995,53 @@ a {
 
   .advantages__row-text {
     font-size: 15px;
+  }
+
+  .homes {
+    color: #383838;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .homes__title {
+    text-align: center;
+    font-weight: 500;
+    font-size: 28px;
+    margin-bottom: 32px;
+  }
+
+  .homes__row-elem {
+    gap: 0;
+  }
+
+  .homes__row-elem:nth-child(3) {
+    display: none;
+  }
+
+  .homes__row-elem:nth-child(4) {
+    display: none;
+  }
+
+  .homes__image {
+    margin-bottom: 8px;
+  }
+
+  .homes__types-title {
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+
+  .homes__row-text {
+    font-size: 12px;
+  }
+
+  .homes__row-arrow {
+    --width-arrow: 28px;
+    width: var(--width-arrow);
+    aspect-ratio: 1/1;
+    position: absolute;
+    right: calc( var(--width-arrow) / 2 - var(--width-arrow));
+    top: calc((var(--homes-image-width) / 2) - var(--width-arrow) / 2);
   }
 
   .footer {
