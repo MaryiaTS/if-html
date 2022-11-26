@@ -134,7 +134,23 @@ a {
   bottom: calc(-4px - ((var(--header-top-height) - 100%) / 2) - 2px) ;
   left: 50%;
   transform: translate(-50%, -50%);
+  animation-name: slide;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
+
+@keyframes slide {
+   from {
+     width: 0;
+     background: #3077C6;
+     border: 2px solid #3077C6;
+   }
+
+   to {
+     width: 46px;
+   }
+ }
 
 .header__links--text {
   font-size: 24px;
