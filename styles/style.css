@@ -811,7 +811,7 @@ a {
   }
 
   .row-arrow-mob {
-    --width-arrow: 34px;
+    --width-arrow: 41px;
     width: var(--width-arrow);
     aspect-ratio: 1/1;
     position: absolute;
@@ -852,6 +852,7 @@ a {
 
   .dest_row-arrow-mob {
     display: block;
+    top: calc((var(--col-width) * 11 / 2) - var(--width-arrow) / 2);
   }
 
   .dest__row-arrow {
@@ -1215,7 +1216,7 @@ a {
   }
 
   .row-arrow-mob {
-    --width-arrow: 28px;
+    --width-arrow: 34px;
     width: var(--width-arrow);
     aspect-ratio: 1/1;
     position: absolute;
@@ -1282,6 +1283,7 @@ a {
 
   .dest_row-arrow-mob {
     display: block;
+    top: calc((var(--col-width) * 5.5 / 2) - var(--width-arrow) / 2);
   }
 
   .dest__row-arrow {
