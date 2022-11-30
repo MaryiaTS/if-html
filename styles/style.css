@@ -470,6 +470,17 @@ a {
   display: flex;
   flex-direction: row;
   column-gap: 16px;
+  position: relative;
+}
+
+.rev_row-arrow {
+  --width-arrow: 48px;
+  width: var(--width-arrow);
+  aspect-ratio: 1/1;
+  position: absolute;
+  right: calc( var(--width-arrow) / 2 - var(--width-arrow));
+  top: calc((var(--col-width) * 7/ 2) - var(--width-arrow) / 2);
+  z-index: 2;
 }
 
 .rev__row-elem {
