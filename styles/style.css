@@ -262,6 +262,7 @@ a {
 .header__badge {
   margin: 120px auto 0;
   max-width: 270px;
+  height: 40px;
   display: flex;
 }
 
@@ -299,7 +300,7 @@ a {
   max-width: 100px;
   aspect-ratio: 1/1;
   display: block;
-  margin-bottom: 55px;
+  margin-bottom: 48px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -351,7 +352,7 @@ a {
 }
 
 .destinations {
-  padding-bottom: calc(48px + 40px + 120px);
+  padding-bottom: calc(48px + 48px + 120px);
 }
 
 .dest-section {
@@ -412,7 +413,7 @@ a {
 
 .dest__row-arrow {
   margin-top: 48px;
-  --width-arrow: 40px;
+  --width-arrow: 48px;
   width: var(--width-arrow);
   aspect-ratio: 1/1;
   position: absolute;
@@ -421,10 +422,12 @@ a {
 }
 
 .sign-up {
+  max-width: var(--container-width);
   background-color: #EAF0F9;
   padding: 24px 24px 52px;
   display: grid;
-  grid-template-columns: 8% 90% 2%;
+  grid-template-columns: 7% auto 2%;
+  column-gap: 24px;
   grid-template-rows: auto;
   grid-template-areas:
   '. . close'
@@ -440,11 +443,10 @@ a {
 }
 
 .sign-up__icon {
-  max-width: 86px;
+  width: 86px;
   aspect-ratio: 1/1;
   grid-area: user;
   grid-row: 2/span 3;
-  margin-right: 24px;
 }
 
 .sign-up__text {
@@ -466,6 +468,11 @@ a {
   grid-area: sign-up-button;
 }
 
+.rev__title {
+  height: 57px;
+  margin-bottom: 102px;
+}
+
 .rev__row {
   display: flex;
   flex-direction: row;
@@ -479,13 +486,13 @@ a {
   aspect-ratio: 1/1;
   position: absolute;
   right: calc( var(--width-arrow) / 2 - var(--width-arrow));
-  top: calc((var(--col-width) * 7/ 2) - var(--width-arrow) / 2);
+  top: calc((var(--col-width) * 6.5/ 2) - var(--width-arrow) / 2);
   z-index: 2;
 }
 
 .rev__row-elem {
   background-color: #EAF0F9;
-  padding-bottom: 24px;
+  padding-bottom: 18px;
   font-size: 18px;
   color: #383838;
 }
@@ -610,7 +617,6 @@ a {
 
 .footer {
   color: #ffffff;
-  padding: 120px 104px;
   display: flex;
   flex-direction: column;
 }
@@ -745,7 +751,7 @@ a {
     border: 0;
     font-size: 15px;
     font-weight: 500;
-    padding: 0 8px 6px;
+    padding-left: 8px;
   }
 
   .header__forms-row-1 {
@@ -1073,6 +1079,10 @@ a {
     column-gap: 6px;
   }
 
+  .rev_row-arrow {
+    display: none;
+  }
+
   .rev__switch-mob--hidden {
     display: flex;
     margin-top: 48px;
@@ -1224,6 +1234,7 @@ a {
     padding: 8px;
     color: #383838;
     font-size: 12px;
+    font-weight: 500;
 }
 
   .header__forms-mob label {
@@ -1300,6 +1311,7 @@ a {
    grid-auto-columns: 33.33%;
    padding: 6px 0;
    grid-template-rows: 20px 16px;
+   align-items: center;
    background-color: #ffffff;
    grid-template-areas:
     "adults-title children-title room-title"
@@ -1496,6 +1508,10 @@ a {
     background-color: #EAF0F9;
   }
 
+  .rev__title {
+    height: 33px;
+  }
+
   .rev__row-elem:nth-child(2) {
     display: none;
   }
@@ -1514,7 +1530,7 @@ a {
   }
 
   .rev__info {
-    margin-top: 12px;
+    margin-top: 5px;
     padding: 0;
   }
 
@@ -1568,9 +1584,13 @@ a {
     padding: 0;
   }
 
+  .rev_row-arrow {
+    display: none;
+  }
+
   .rev__switch-mob--hidden {
     display: flex;
-    margin-top: 32px;
+    margin-top: 28px;
     column-gap: 8px;
     justify-content: center;
   }
