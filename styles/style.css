@@ -1090,17 +1090,25 @@ a {
     justify-content: center;
   }
 
-  .rev__switch-mob--hidden input:nth-child(even) {
-    display: none;
+  .rev__switch-mob {
+    padding: 0;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #333333;
+    border-radius: 4px;
   }
 
-  .rev__switch-mob--hidden input {
-    width: 8px;
+  .rev__switch-mob:focus {
+    background-color: #333333;
+  }
+
+  .rev__switch-mob--hidden button:nth-child(even) {
+    display: none;
   }
 
   .footer__logo--hidden {
     display: block;
-    margin: 40px auto;
+    margin: 0 auto 40px;
     height: 19px;
   }
 
@@ -1125,7 +1133,7 @@ a {
 
   .footer__down-text {
     font-size: 12px;
-    margin: 32px auto;
+    margin: 32px auto 0;
   }
 }
 
@@ -1595,12 +1603,8 @@ a {
     justify-content: center;
   }
 
-  .rev__switch-mob--hidden input:nth-child(even) {
+  .rev__switch-mob--hidden button:nth-child(even) {
     display: flex;
-  }
-
-  .rev__switch-mob--hidden input {
-    width: 8px;
   }
 
   .sign-up-sect-desktop {
