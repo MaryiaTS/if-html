@@ -783,11 +783,11 @@ a {
 
   .header__forms-row-2 {
     display: grid;
-    grid-template-columns: var(--mob-row-2-width) var(--form-mob-unit) var(--mob-row-2-width);
+    grid-template-columns: 50% 50%;
     grid-auto-rows: calc(var(--mob-row-height) / 2);
     grid-template-areas:
-    "check-in-title . check-out-title"
-    "check-in-form . check-out-form";
+    "check-in-title check-out-title"
+    "check-in-form check-out-form";
     border-radius: 4px;
     margin-bottom: var(--form-mob-unit);
   }
@@ -798,18 +798,22 @@ a {
 
   .check-in-mob-title {
     grid-area: check-in-title;
+    margin-right: 4px;
   }
 
   .check-out-mob-title {
     grid-area: check-out-title;
+    margin-left: 4px;
   }
 
   .check-in-mob-form {
     grid-area: check-in-form;
+    margin-right: 4px;
   }
 
   .check-out-mob-form {
     grid-area: check-out-form;
+    margin-left: 4px;
   }
 
   .header__forms-row-3 {
@@ -1098,6 +1102,10 @@ a {
     border-radius: 4px;
   }
 
+  .rev__switch-mob:first-child {
+    background-color: #333333;
+  }
+
   .rev__switch-mob:focus {
     background-color: #333333;
   }
@@ -1238,16 +1246,12 @@ a {
   .header__forms-mob {
     display: block;
     background-color: #F5BD41;
-    max-width: calc(312px + var(--unit) / 2 * 2);
+    max-width: calc(100% + var(--unit) / 2 * 2);
     padding: 8px;
     color: #383838;
     font-size: 12px;
     font-weight: 500;
 }
-
-  .header__forms-mob label {
-    padding: 6px 0 4px 8px;
-  }
 
   .header__header-form-mob {
     border: 0;
@@ -1257,20 +1261,7 @@ a {
   }
 
   .header__forms-row-1 {
-    display: grid;
     grid-template-columns: 11.5% auto;
-    grid-template-rows: var(--mob-row-height);
-    background-color: #ffffff;
-    grid-template-areas: "dest-title dest-form";
-    border-radius: 4px;
-    margin-bottom: var(--form-mob-unit);
-  }
-
-  .header-dest-mob-title {
-    padding-left: 4px;
-    display: grid;
-    align-items: center;
-    grid-area: dest-title;
   }
 
   .header__form-mob-dest {
@@ -1281,37 +1272,6 @@ a {
   .header__destination-mob-form {
     grid-area: dest-form;
     padding: 6px 0 4px 0;
-  }
-
-  .header__forms-row-2 {
-    display: grid;
-    grid-template-columns: var(--mob-row-2-width) var(--form-mob-unit) var(--mob-row-2-width);
-    grid-auto-rows: calc(var(--mob-row-height) / 2);
-    grid-template-areas:
-    "check-in-title . check-out-title"
-    "check-in-form . check-out-form";
-    border-radius: 4px;
-    margin-bottom: var(--form-mob-unit);
-  }
-
-  .header__forms-row-2 label {
-    background-color: #ffffff;
-  }
-
-  .check-in-mob-title {
-    grid-area: check-in-title;
-  }
-
-  .check-out-mob-title {
-    grid-area: check-out-title;
-  }
-
-  .check-in-mob-form {
-    grid-area: check-in-form;
-  }
-
-  .check-out-mob-form {
-    grid-area: check-out-form;
   }
 
  .header__forms-row-3 {
