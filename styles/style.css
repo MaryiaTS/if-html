@@ -121,7 +121,9 @@ a {
 
 .header__menu-item {
   display: grid;
+  height: var(--header-top-height);
   position: relative;
+  align-items: center;
 }
 
 .header__menu-item:hover:after {
@@ -131,7 +133,7 @@ a {
   background: #f5bd41;
   border: 2px solid #f5bd41;
   position: absolute;
-  bottom: calc(-4px - ((var(--header-top-height) - 100%) / 2) - 2px) ;
+  bottom: -6px;
   left: 50%;
   transform: translate(-50%, -50%);
   animation-name: slide;
@@ -155,7 +157,6 @@ a {
 .header__links--text {
   font-size: 24px;
   color: #FFFFFF;
-  height: 28px;
 }
 
 .text-1 {
@@ -213,6 +214,7 @@ a {
 }
 
 .header__header-form {
+  font-size: 18px;
   max-width: 100%;
   height: 64px;
   padding: 22px 24px;
@@ -397,9 +399,43 @@ a {
   gap: 24px;
 }
 
+.dest__image-block {
+  position: relative;
+  max-width: 100%;
+  aspect-ratio: 1/1;
+}
+
 .dest__image {
   max-width: 100%;
   aspect-ratio: 1/1;
+}
+
+.dest__book-button--hover {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  background: rgba(56, 56, 56, 0.4);
+  box-shadow: inset 0 4px 70px rgba(56, 56, 56, 0.5);
+  display: none;
+}
+
+.dest__book-button {
+  display: flex;
+  width: 43%;
+  height: 16%;
+  margin: 42% auto;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: #3077C6;
+  border: 1px solid #3077C6;
+  border-radius: 8px;
+}
+
+.dest__image-block:hover .dest__book-button--hover{
+  display: block;
 }
 
 .dest__types-title {
@@ -987,6 +1023,10 @@ a {
   }
 
   .dest__row-elem:nth-child(4) {
+    display: none;
+  }
+
+  .dest__image-block:hover .dest__book-button--hover{
     display: none;
   }
 
